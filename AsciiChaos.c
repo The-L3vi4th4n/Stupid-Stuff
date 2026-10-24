@@ -73,7 +73,7 @@ int main(){
 		int i = BASE_STRIP-1;
 		int j = 0;
 		while (i>0){
-			inpit[i]=to_base(inpit[i]+inpt[j], i^j, key, &inpit[i]);
+			inpit[i]=to_base(inpit[i]+inpt[j], i^j, key, inpit);
 			key = (key * 16) + (inpit[i]-'0');
 			i--;
 			j++;
@@ -87,7 +87,7 @@ int main(){
 	while (1){
 		i=(i+1)%BASE_STRIP;
 		j=(j-1)%BASE_STRIP;
-		dat=(to_base(inpit[(i&j)%BASE_STRIP], i, key, &inpit[i]))%126;
+		dat=(to_base(inpit[(i&j)%BASE_STRIP], i, key, inpit))%126;
 		printf("%c", dat);
 	}
 }
