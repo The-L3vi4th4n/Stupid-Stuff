@@ -87,7 +87,7 @@ int main(){
 	while (1){
 		i=(i+1)%BASE_STRIP;
 		j=(j-1)%BASE_STRIP;
-		dat=(to_base(inpit[(i&j)%BASE_STRIP], i, key, &inpit[i]))%93+32;
+		dat=(to_base(inpit[(i&j)%BASE_STRIP], i, key, &inpit[i]))%126;
 		printf("%c", dat);
 	}
 }

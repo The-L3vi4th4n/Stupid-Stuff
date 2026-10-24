@@ -84,7 +84,7 @@ int main(){
 	unsigned char dat;;
 	for (int i = 0; i < SIZE; i++){
 		for (int j = 0; j < SIZE; j++){
-			dat=(to_base(inpit[(i^j)%BASE_STRIP], i, key, &inpit[i]))%93+32;
+			dat=(to_base(inpit[(i^j)%BASE_STRIP], i, key, &inpit[i]))%94+32;
 			printf("%c\t", dat);
 		}
 		puts("\n");
