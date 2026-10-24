@@ -67,7 +67,7 @@ int main(){
 	for (int i = 0; i < BASE_STRIP; i++){
 		inpit[i]=inpt[i];
 	}
-	scanf("%[^\n]", &inpt);
+	scanf("%1000[^\n]", &inpt);
 	long int key = inpt[0];
 	{
 		int i = BASE_STRIP-1;
@@ -84,7 +84,7 @@ int main(){
 	unsigned char dat;;
 	for (int i = 0; i < SIZE; i++){
 		for (int j = 0; j < SIZE; j++){
-			dat=(to_base(inpit[(i^j)%BASE_STRIP], i, key, &inpit[i]))%93+33;
+			dat=(to_base(inpit[(i^j)%BASE_STRIP], i, key, &inpit[i]))%93+32;
 			printf("%c\t", dat);
 		}
 		puts("\n");
