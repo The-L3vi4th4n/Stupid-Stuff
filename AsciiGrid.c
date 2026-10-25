@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <unistd.h>
-#include <stdlib.h>
 #include <limits.h>
 
 #ifndef SIZE
@@ -80,7 +79,6 @@ int main(){
 		}
 	}
 	puts("");
-	srand(key);
 	unsigned char dat;;
 	for (int i = 0; i < SIZE; i++){
 		for (int j = 0; j < SIZE; j++){

@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <unistd.h>
-#include <stdlib.h>
 #include <limits.h>
 
 #ifndef SIZE
@@ -80,7 +79,6 @@ int main(){
 		}
 	}
 	puts("");
-	srand(key);
 	unsigned char dat;;
 	int i = 0;
 	int j = BASE_STRIP;
