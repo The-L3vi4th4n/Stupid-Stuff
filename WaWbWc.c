@@ -10,37 +10,51 @@ enum word{
 	WC
 };
 
-enum word wordType(char* text, int *loc);
-
 int main(){
 	srand(time(NULL));
-	unsigned char vals[4][4] = {0};
-	unsigned char inpt[10240] = {0};
+	unsigned long long vals[4][4] = {0};
 	puts("Enter some text:");
-	scanf("%10239[^\n]%*c", inpt);
-	printf("%s\n", inpt);
-	int loc = 0;
+	int curchar = 0;
+	int prevchar = 0;
+	int let = 0;
+	int sps = 0;
 	enum word cwd = NA;
 	enum word pwd = NA;
-	while (inpt[loc]!='\0'){
+	curchar = getchar();
+	while (curchar!=EOF && curchar!='\n'){
 		pwd = cwd;
-		cwd = wordType(inpt, &loc);
+		let = 0;
+		sps = 0;
+		cwd = NA;
+		while (let!=1){
+			if (sps==1 && prevchar=='w'){
+				if (curchar=='a') cwd = WA;
+				else if (curchar=='b') cwd = WB;
+				else if (curchar=='c') cwd = WC;
+				else cwd = NA;
+			}
+			if (curchar==EOF || curchar==' ' || curchar=='\n') let = 1;
+			prevchar = curchar;
+			curchar = getchar();
+			sps++;
+		}
 		vals[pwd][cwd]++;
-		printf("%d\n", loc);
-		loc++;
 	}
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
-			printf("%d ", vals[i][j]);
+			printf("%llu ", vals[i][j]);
 		}
 		puts("");
 	}
 	char tmp;
+	curchar=getchar();
+	while (curchar!=EOF) curchar=getchar(); 
 	scanf("%c", &tmp);
 	int mx;
 	cwd = tmp % 4;
 	int randy = 0;
 	int rande = 0;
+	int loc = 0;
 	while (1){
 		pwd = cwd;
 		mx = 0;
@@ -56,7 +70,7 @@ int main(){
 			cwd = (cwd + pwd + rand()) % 4; 
 			randy=0;
 		}
-		rande += abs(cwd - pwd);
+		rande += cwd - pwd;
 		if (rande>=21){
 			cwd = (cwd + pwd + rand()) % 4;
 			rande = 0;
@@ -69,21 +83,4 @@ int main(){
 		usleep(10000);
 	}
 	return 0;
-}
-
-enum word wordType(char* text, int *loc){
-	enum word ret;
-	if (text[*loc]=='w' && text[*loc+1]=='a') ret = WA;
-	else if (text[*loc]=='w' && text[*loc+1]=='b') ret = WB;
-	else if (text[*loc]=='w' && text[*loc+1]=='c') ret = WC;
-	else ret = NA;
-	while (text[*loc]!=' ' && text[*loc]!='\n' && text[*loc]!='\0'){
-		(*loc)++;
-	}
-	printf("%d ", ret);
-	if (ret==WA) puts("WA");
-	else if (ret==WB) puts("WB");
-	else if (ret==WC) puts("WC");
-	else puts("NA");
-	return ret;
 }
