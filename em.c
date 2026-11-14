@@ -85,7 +85,7 @@ int main(){
 
 	printf("\nwindows:\n");
 	printf("deleting the current window -> ctrl+x 0\n");
-	printf("deleting other windows -> ctrl+x 1");
+	printf("deleting other windows -> ctrl+x 1\n");
 	printf("spliting the current window -> ctrl+x 2\n");
 	printf("using next window -> ctrl+x o\n");
 	printf("using previous window -> ctrl+x p\n");
