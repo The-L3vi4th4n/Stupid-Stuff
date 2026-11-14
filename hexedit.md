@@ -58,6 +58,7 @@
 <p> z : &nbsp; 7A &nbsp; 122 </p>
 <p> ' : &nbsp; 27 &nbsp; 39 </p>
 <p> " : &nbsp; 22 &nbsp; 34 </p>
+<p> . : &nbsp; 2E &nbsp; 46 </p>
 <p> ; : &nbsp; 3B &nbsp; 59 </p>
 <p> & : &nbsp; 26 &nbsp; 38 </p>
 <p> * : &nbsp; 2A &nbsp; 42 </p>
