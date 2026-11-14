@@ -80,8 +80,8 @@ int main(){
 	printf("buffers are like tabs in other editors\n");
 	printf("listing all buffers(doens't work in tty for me either) -> ctrl+x ctrl+b\n");
 	printf("opening a buffer -> ctrl+x b\n");
-	printf("renaming a buffer -> esc+n\n");
-	printf("deleting a buffer -> ctrl+k k\n");
+	printf("renaming a buffer -> esc ctrl+n\n");
+	printf("deleting a buffer -> ctrl+x k\n");
 
 	printf("\nwindows:\n");
 	printf("deleting the current window -> ctrl+x 0\n");
