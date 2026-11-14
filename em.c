@@ -39,7 +39,7 @@ int main(){
 	" at this and go 'wow thats cool' and a programmer will go 'wow this"
 	" person is hardcore' and that feels cool tho is a VERY stupid reason\n");
 
-	printf("3. my fav person of all time, Linux Torvalds, uses it so like I"
+	printf("3. my fav person of all time, Linus Torvalds, uses it so like I"
 	" want to too :3\n");
 
 	printf(" note: he also actively says not to use it and that him using it"
