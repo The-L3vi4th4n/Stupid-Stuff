@@ -2,6 +2,7 @@
 <p> text characters </p>
 <p> character : &nbsp; hex &nbsp; denary </p>
 <p> space : &nbsp; 20 &nbsp; 32 </p>
+<p> # : &nbsp; 23 &nbsp; 35 </p>
 <p> 0 : &nbsp; 30 &nbsp; 48 </p>
 <p> A : &nbsp; 41 &nbsp; 65 </p>
 <p> a : &nbsp; 61 &nbsp; 93 </p>
