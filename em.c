@@ -15,7 +15,7 @@ int main(){
 	printf("%s\n", input);
 	printf("your input was captured\n");
 
-	printf("\nthis program was written with uemacs from Linux Torvalds's fork of it\n");
+	printf("\nthis program was written with uemacs from Linus Torvalds's fork of it\n");
 
 	printf("I have like no prlbm with this like I barely use vims features at"
 	" all an really don't use them other than some basic ones\n");
